@@ -1,0 +1,110 @@
+.div_iputs {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  width: 100%;
+}
+
+.fieldset_customerId {
+  border: none;
+  height: 25px;
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+.fieldset_customerId > input {
+  width: 100px;
+}
+
+.fieldset_p {
+  font-weight: 500;
+}
+.fieldset_driversOptions {
+  width: 100%;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.div_drivers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn_ApplyFilter {
+  width: 150px;
+  background-color: #141057c7;
+  padding: 6px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input_radio {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input_radio > input {
+  cursor: pointer;
+}
+
+.ul_rides {
+  margin-top: 1rem;
+  width: 100%;
+  height: 340px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  overflow: auto;
+}
+
+.card-ride {
+  padding: 0.5rem;
+  width: 45%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  background-color: #14105715;
+  border-radius: 4px;
+}
+
+.card-ride-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: start;
+}
+.header-first {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ride-img {
+  width: 50px;
+  height: 50px;
+
+  background-color: #756de670;
+  border-radius: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+}

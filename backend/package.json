@@ -1,0 +1,31 @@
+{
+  "name": "app-taxi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "tsx --watch src/server.ts",
+    "tsc": "tsc --init",
+    "prisma:migrate": "npx prisma migrate dev",
+    "prisma:studio": "npx prisma studio",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.9.2",
+    "prisma": "^5.22.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@prisma/client": "^5.22.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.1.0",
+    "tsx": "^4.19.2",
+    "zod": "^3.23.8"
+  }
+}

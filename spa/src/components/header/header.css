@@ -1,0 +1,33 @@
+.header-box {
+  width: 100vw;
+  background-color: #1a148f1a;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+header > h1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+header > ul {
+  display: flex;
+  gap: 2rem;
+}
+
+header > ul > li {
+  cursor: pointer;
+}
+
+header > ul > li:hover {
+  text-decoration: underline;
+}
