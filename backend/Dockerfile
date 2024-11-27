@@ -3,13 +3,11 @@ FROM node:22-alpine
 
 WORKDIR /api
 
-COPY . .
-
-VOLUME [ "../.env" ]
-
-RUN rm -rf node_modules
+COPY package*.json ./
 
 RUN npm i
+
+COPY . . 
 
 RUN npx prisma generate
 

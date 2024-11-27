@@ -1,12 +1,19 @@
 services:
   api:
-    image: api-taxi
+    container_name: api-taxi
+    build: ./backend
     ports:
       - "8080:8080"
+    restart: always
+    env_file:
+      - ./.env
 
-  # frontend:
-  #   build: ./frontend
-  #   ports:
-  #     - "80:80"
-  #   depends_on:
-  #     - backend
+  spa:
+    container_name: spa-taxi
+    build: ./spa
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    env_file:
+      - ./.env
