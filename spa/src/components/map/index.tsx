@@ -13,11 +13,13 @@ import { useMap } from "@/provider/mapProvider";
 
 import "./map.css";
 import StarRating from "@/components/rating";
-import { useEffect } from "react";
+
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+require("dotenv").config({ path: "../.env" });
 
 const libraries: Library[] = ["places"];
 
-export default function Map({ apiKey }: { apiKey: string }) {
+export default function Map({ apiKey }: { apiKey: string | undefined }) {
   const { estimate, confirmRide } = useRide();
   const {
     onLoadSearchBox,
@@ -33,15 +35,9 @@ export default function Map({ apiKey }: { apiKey: string }) {
     directionsRendererOptions,
   } = useMap();
 
-  useEffect(() => {
-    if (apiKey == undefined) {
-      console.error("A GOOGLE_API_KEY não foi enviado");
-    }
-  }, []);
-
   return (
     <section className="section-map">
-      <LoadScript googleMapsApiKey={apiKey} libraries={libraries}>
+      <LoadScript googleMapsApiKey={apiKey!} libraries={libraries}>
         <div className="form-map">
           <section className="section-form-drivers">
             <form className="address-form">

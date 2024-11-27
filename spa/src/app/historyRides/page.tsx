@@ -136,7 +136,7 @@ export default function HistoryRide() {
                   </p>
                   <p>
                     <span className="semibold">Distância:</span>
-                    <span className="font-small"> {ride.distance}km</span>
+                    <span className="font-small"> {ride.distance} metros</span>
                   </p>
                   <p>
                     <span className="semibold">Tempo:</span>

@@ -31,7 +31,7 @@ export const estimateSchemaReply = z.object({
   distance: z.instanceof(Prisma.Decimal).or(z.number()),
   duration: z.string(),
   options: z.array(driverSchema),
-  routerResponse: z.any(),
+  routeResponse: z.any(),
 });
 
 export const driverModelSchema = z.object({

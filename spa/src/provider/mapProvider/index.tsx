@@ -12,9 +12,6 @@ import {
 import { useRide } from "../rideProvider";
 import { TformData } from "../rideProvider/interface";
 import { toast } from "react-toastify";
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-require("dotenv").config();
-
 interface IMapContext {
   position: {
     lat: number;

@@ -91,10 +91,10 @@ class RideRepository implements TRideRepository {
         latitude: endLocation.latitude,
         longitude: endLocation.longitude,
       },
-      distance: distance,
+      distance: computeRoutes.routes[0].distanceMeters,
       duration: duration,
       options: options,
-      routerResponse: computeRoutes,
+      routeResponse: computeRoutes,
     };
 
     return reply;
